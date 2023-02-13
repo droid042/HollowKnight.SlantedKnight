@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net472</TargetFramework>
+        <AssemblyTitle>SlantedKnight</AssemblyTitle>
+        <AssemblyVersion>1.0.0.0</AssemblyVersion>
+        <DebugType>portable</DebugType>
+        <Copyright>Copyright © 2023</Copyright>
+        <OutputPath>bin</OutputPath>
+        <LangVersion>latest</LangVersion>
+        <!--
+            Update this to be the `Managed` folder of your Hollow Knight install in real mods,
+            or to point to the nescessary assemblies referenced by this mod.
+        -->
+        <HollowKnightRefs>d:/Games/HollowKnight/hollow_knight_Data/Managed/</HollowKnightRefs>
+    </PropertyGroup>
+    <ItemGroup>
+        <Reference Include="Assembly-CSharp">
+            <HintPath>$(HollowKnightRefs)/Assembly-CSharp.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.CoreModule">
+            <HintPath>$(HollowKnightRefs)/UnityEngine.CoreModule.dll</HintPath>
+        </Reference>
+        <Reference Include="UnityEngine.Physics2DModule">
+            <HintPath>$(HollowKnightRefs)/UnityEngine.Physics2DModule.dll</HintPath>
+        </Reference>
+    </ItemGroup>
+</Project>
